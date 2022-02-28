@@ -13,6 +13,11 @@
 		D6FD128F27C800CE00E29A21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FD128D27C800CE00E29A21 /* Main.storyboard */; };
 		D6FD129127C800CF00E29A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FD129027C800CF00E29A21 /* Assets.xcassets */; };
 		D6FD129427C800CF00E29A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FD129227C800CF00E29A21 /* LaunchScreen.storyboard */; };
+		D6FD129C27C8016400E29A21 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD129B27C8016400E29A21 /* DetailViewController.swift */; };
+		D6FD129F27C80BCD00E29A21 /* FlagListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD129E27C80BCD00E29A21 /* FlagListModel.swift */; };
+		D6FD12A127C80E6A00E29A21 /* FetchFlagListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD12A027C80E6A00E29A21 /* FetchFlagListData.swift */; };
+		D6FD12A427C81F6B00E29A21 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D6FD12A327C81F6B00E29A21 /* Kingfisher */; };
+		D6FD12A627C95A1400E29A21 /* FlagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD12A527C95A1400E29A21 /* FlagDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		D6FD129027C800CF00E29A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6FD129327C800CF00E29A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6FD129527C800CF00E29A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6FD129B27C8016400E29A21 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D6FD129E27C80BCD00E29A21 /* FlagListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListModel.swift; sourceTree = "<group>"; };
+		D6FD12A027C80E6A00E29A21 /* FetchFlagListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFlagListData.swift; sourceTree = "<group>"; };
+		D6FD12A527C95A1400E29A21 /* FlagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FD12A427C81F6B00E29A21 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,27 @@
 		D6FD128627C800CE00E29A21 /* FlagAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				D6FD129D27C80BA800E29A21 /* Model */,
 				D6FD128727C800CE00E29A21 /* AppDelegate.swift */,
 				D6FD128927C800CE00E29A21 /* SceneDelegate.swift */,
 				D6FD128B27C800CE00E29A21 /* ViewController.swift */,
 				D6FD128D27C800CE00E29A21 /* Main.storyboard */,
+				D6FD129B27C8016400E29A21 /* DetailViewController.swift */,
+				D6FD12A027C80E6A00E29A21 /* FetchFlagListData.swift */,
+				D6FD12A527C95A1400E29A21 /* FlagDetailViewController.swift */,
 				D6FD129027C800CF00E29A21 /* Assets.xcassets */,
 				D6FD129227C800CF00E29A21 /* LaunchScreen.storyboard */,
 				D6FD129527C800CF00E29A21 /* Info.plist */,
 			);
 			path = FlagAppIOS;
+			sourceTree = "<group>";
+		};
+		D6FD129D27C80BA800E29A21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6FD129E27C80BCD00E29A21 /* FlagListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,9 @@
 			dependencies = (
 			);
 			name = FlagAppIOS;
+			packageProductDependencies = (
+				D6FD12A327C81F6B00E29A21 /* Kingfisher */,
+			);
 			productName = FlagAppIOS;
 			productReference = D6FD128427C800CE00E29A21 /* FlagAppIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = D6FD127B27C800CE00E29A21;
+			packageReferences = (
+				D6FD12A227C81F6B00E29A21 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D6FD128527C800CE00E29A21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FD12A627C95A1400E29A21 /* FlagDetailViewController.swift in Sources */,
 				D6FD128C27C800CE00E29A21 /* ViewController.swift in Sources */,
 				D6FD128827C800CE00E29A21 /* AppDelegate.swift in Sources */,
+				D6FD129F27C80BCD00E29A21 /* FlagListModel.swift in Sources */,
 				D6FD128A27C800CE00E29A21 /* SceneDelegate.swift in Sources */,
+				D6FD12A127C80E6A00E29A21 /* FetchFlagListData.swift in Sources */,
+				D6FD129C27C8016400E29A21 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlagAppIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flag App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlagAppIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flag App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6FD12A227C81F6B00E29A21 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6FD12A327C81F6B00E29A21 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6FD12A227C81F6B00E29A21 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6FD127C27C800CE00E29A21 /* Project object */;
 }
